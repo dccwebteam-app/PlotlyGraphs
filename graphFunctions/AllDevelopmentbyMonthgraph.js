@@ -56,11 +56,6 @@ if (timeframe_Development_by_Month == "Months") {
 	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
-
-	console.log("xValues: " + xValues);
-	console.log("filteredDates: " + filteredDates);
-	console.log("StartDate: " + StartDate);
-	console.log("EndDate: " + EndDate);
 	
 	dtickValue = "M3";
 	tick0Value = DateMinMax(filteredDates, "max");
@@ -93,11 +88,6 @@ else if (timeframe_Development_by_Month == "Years") {
 		dtickValue = TimeToMilliseconds(2, "Years");
 		}
 
-	console.log("xValues: " + xValues);
-	console.log("filteredDates: " + filteredDates);
-	console.log("StartDate: " + StartDate);
-	console.log("EndDate: " + EndDate);
-		
 	tickformatValue = "%Y";
 
 	;}	
@@ -161,14 +151,9 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 			return data[TimeframeConverted+"Total New Dwellings"];
 		});
 
-	console.log("yValues1: " + yValues);
-
 	BlanksToRemove(yValues);
 	RemoveBlanks(xValues, dels);
 	RemoveBlanks(yValues, dels);
-
-	console.log("xValues2: " + xValues);
-	console.log("yValues2: " + yValues);
 	
 	data = [{
 		x: xValues,
