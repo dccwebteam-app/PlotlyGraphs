@@ -1,5 +1,25 @@
 function InfometricsGraph(chartData) {
 
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+function t(){
+    return x;
+}
+
+window.onload = t;
+window.onresize = t;
+
+var WindowWidth = t();
+	
+if (WindowWidth < 500)
+	{dTickValue = "M36";}
+else 
+	{dTickValue = "M12";}
+
 	var DataToUseWithSpaces = $('#InfometricsGraph_Datatype option:selected').text();
 	var DataToUse = DataToUseWithSpaces.replace(/ /g, "");
 	var EndofString = DataToUseWithSpaces.slice(-6);
@@ -112,7 +132,7 @@ RemoveBlanks(yValuesNZ, dels);
 			fixedrange : Zooming,
 
 			type: 'date',
-			dtick: "M12",
+			dtick: dTickValue,
 			tick0: "2000-06-30",
 			tickformat: "%b '%y",
 
