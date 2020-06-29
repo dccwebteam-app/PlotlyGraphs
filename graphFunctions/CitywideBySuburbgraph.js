@@ -18,7 +18,7 @@ var WindowWidth = t();
 console.log(WindowWidth);
 	
 if (WindowWidth < 500)
-	{dTickValue = 5,
+	{dTickValue = 10,
 	tick0Value = 0;}
 else if (WindowWidth < 900)
 	{dTickValue = 2,
