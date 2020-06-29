@@ -1,5 +1,28 @@
 function BCsAndPopulationGraph(chartData){
 
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+function t(){
+    return x;
+}
+
+window.onload = t;
+window.onresize = t;
+
+var WindowWidth = t();
+	
+console.log(WindowWidth);
+	
+if (WindowWidth < 500)
+	{dtick = 5;}
+else 
+	{dtick = 2;}
+
+	
 function BlanksToRemove(arrY) {
  
 	i = 0;
