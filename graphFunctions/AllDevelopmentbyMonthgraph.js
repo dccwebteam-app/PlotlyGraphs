@@ -52,14 +52,7 @@ window.onload = t;
 window.onresize = t;
 
 var WindowWidth = t();
-	
-console.log(WindowWidth);
-	
-if (WindowWidth < 500)
-	{dTickValueMultiplier = 4;}
-else 
-	{dTickValueMultiplier = 1;}
-	
+		
 if (chartData == null || chartData.length <= 0)
 		return;
 
@@ -106,12 +99,18 @@ else if (timeframe_Development_by_Month == "Years") {
 		tick0Value = '2010-01-01';	
 		StartDate = new Date('2010-01-01');
 		StartDate.setDate(StartDate.getDate()-300);		
-		dtickValue = TimeToMilliseconds(1*dTickValueMultiplier, "Years");
+		if (WindowWidth < 500)
+			{dtickValue = TimeToMilliseconds(4, "Years");}
+		else 
+			{dtickValue = TimeToMilliseconds(1, "Years");}
 		}
 	else
 		{
 		tick0Value = '1991-01-01';	
-		dtickValue = TimeToMilliseconds(2*dTickValueMultiplier, "Years");
+		if (WindowWidth < 500)
+			{dtickValue = TimeToMilliseconds(5, "Years");}
+		else 
+			{dtickValue = TimeToMilliseconds(2, "Years");}
 		}
 
 	tickformatValue = "%Y";
