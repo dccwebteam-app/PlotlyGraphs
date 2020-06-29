@@ -1,24 +1,24 @@
 function PropertyDataGraph(chartData){
 
-var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    x = w.innerWidth || e.clientWidth || g.clientWidth;
+	var w = window,
+		d = document,
+		e = d.documentElement,
+		g = d.getElementsByTagName('body')[0],
+		x = w.innerWidth || e.clientWidth || g.clientWidth;
 
-function t(){
-    return x;
-}
+	function t(){
+		return x;
+	}
 
-window.onload = t;
-window.onresize = t;
+	window.onload = t;
+	window.onresize = t;
 
-var WindowWidth = t();
-	
-if (WindowWidth < 500)
-	{dTickValue = 20;}
-else 
-	{dTickValue = 4;}
+	var WindowWidth = t();
+		
+	if (WindowWidth < 500)
+		{dTickValue = 20;}
+	else 
+		{dTickValue = 4;}
 
 	
 	var DataType = $('#PropertySales_DataType option:selected').text();
@@ -69,7 +69,7 @@ else
 				zeroline: false,
 				tickmode: 'linear',
 				tick0: 0,
-				dtick: dtickValue,
+				dtick: dTickValue,
 				tickangle: 45,
 				fixedrange: Zooming
 				},
@@ -127,7 +127,7 @@ else
 				zeroline: true,
 				tickmode: 'linear',
 				tick0: 0,
-				dtick: dtickValue,
+				dtick: dTickValue,
 				tickangle: 45,
 				fixedrange: Zooming
 				},
@@ -159,7 +159,7 @@ else
 				ticktext: xData,
 				tickmode: 'linear',
 				tick0: 0,
-				dtick: dtickValue,
+				dtick: dTickValue,
 				tickangle: 45,
 				fixedrange: Zooming
 				},
