@@ -37,6 +37,28 @@ function TimeToMilliseconds(amount, type) {
 	
 	
 function AllDevelopmentbyMonthgraph(chartData){
+
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+function t(){
+    return x;
+}
+
+window.onload = t;
+window.onresize = t;
+
+var WindowWidth = t();
+	
+console.log(WindowWidth);
+	
+if (WindowWidth < 500)
+	{dTickValueMultiplier = 4;}
+else 
+	{dTickValueMultiplier = 1;}
 	
 if (chartData == null || chartData.length <= 0)
 		return;
@@ -57,7 +79,7 @@ if (timeframe_Development_by_Month == "Months") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 	
-	dtickValue = "M3";
+	dtickValue = "M"+str(dTickValueMultiplier*3);
 	tick0Value = DateMinMax(filteredDates, "max");
 	tickformatValue = "%b '%y";
 	
@@ -80,12 +102,12 @@ else if (timeframe_Development_by_Month == "Years") {
 		tick0Value = '2010-01-01';	
 		StartDate = new Date('2010-01-01');
 		StartDate.setDate(StartDate.getDate()-300);		
-		dtickValue = TimeToMilliseconds(1, "Years");
+		dtickValue = TimeToMilliseconds(1*dTickValueMultiplier, "Years");
 		}
 	else
 		{
 		tick0Value = '1991-01-01';	
-		dtickValue = TimeToMilliseconds(2, "Years");
+		dtickValue = TimeToMilliseconds(2*dTickValueMultiplier, "Years");
 		}
 
 	tickformatValue = "%Y";
@@ -103,7 +125,7 @@ else {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = TimeToMilliseconds(3, "Months");
+	dtickValue = "M"+str(dTickValueMultiplier*3);
 	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
 	;}	
