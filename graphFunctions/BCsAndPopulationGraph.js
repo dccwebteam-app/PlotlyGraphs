@@ -18,9 +18,9 @@ var WindowWidth = t();
 console.log(WindowWidth);
 	
 if (WindowWidth < 500)
-	{dtick = 5;}
+	{dtickValue = 5;}
 else 
-	{dtick = 2;}
+	{dtickValue = 2;}
 
 	
 function BlanksToRemove(arrY) {
@@ -153,7 +153,7 @@ layout = {
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0 : 1,
-			dtick: 2,
+			dtick: dtickValue,
 			tickangle: 45,
 			autorange: true,
 			title: "Year ending 30 June"},
