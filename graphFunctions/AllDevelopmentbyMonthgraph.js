@@ -79,7 +79,11 @@ if (timeframe_Development_by_Month == "Months") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 	
-	dtickValue = "M"+str(dTickValueMultiplier*3);
+	if (WindowWidth < 500)
+		dtickValue = "M6";
+	else 
+		dtickValue = "M3";
+
 	tick0Value = DateMinMax(filteredDates, "max");
 	tickformatValue = "%b '%y";
 	
@@ -125,7 +129,11 @@ else {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = "M"+str(dTickValueMultiplier*3);
+	if (WindowWidth < 500)
+		dtickValue = "M6";
+	else 
+		dtickValue = "M3";
+	
 	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
 	;}	
