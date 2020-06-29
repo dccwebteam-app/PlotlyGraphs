@@ -20,33 +20,33 @@ if (WindowWidth < 500)
 else 
 	{dTickValue = "M12";}
 
-	var DataToUseWithSpaces = $('#InfometricsGraph_Datatype option:selected').text();
-	var DataToUse = DataToUseWithSpaces.replace(/ /g, "");
-	var EndofString = DataToUseWithSpaces.slice(-6);
+var DataToUseWithSpaces = $('#InfometricsGraph_Datatype option:selected').text();
+var DataToUse = DataToUseWithSpaces.replace(/ /g, "");
+var EndofString = DataToUseWithSpaces.slice(-6);
 
-	RangeValues = [];
+RangeValues = [];
 
-	/*
-	document.getElementById("ExtraReferences").innerHTML = "";
+/*
+document.getElementById("ExtraReferences").innerHTML = "";
 
-	if (DataToUseWithSpaces == "Rental affordability index") {
-		var textdiv = document.getElementById("ExtraReferences");
-		var aTag = document.createElement('a');
-		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Dunedin%20City/StandardOfLiving/RentalAffordability");
-		aTag.setAttribute('target', "_blank");
-		aTag.innerHTML = "Rental Affordability Index";
-		textdiv.appendChild(aTag); ;
-	}
+if (DataToUseWithSpaces == "Rental affordability index") {
+	var textdiv = document.getElementById("ExtraReferences");
+	var aTag = document.createElement('a');
+	aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Dunedin%20City/StandardOfLiving/RentalAffordability");
+	aTag.setAttribute('target', "_blank");
+	aTag.innerHTML = "Rental Affordability Index";
+	textdiv.appendChild(aTag); ;
+}
 
-	if (DataToUseWithSpaces == "Housing affordability index") {
-		var textdiv = document.getElementById("ExtraReferences");
-		var aTag = document.createElement('a');
-		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Dunedin%20City/StandardOfLiving/Housing_Affordability");
-		aTag.setAttribute('target', "_blank");
-		aTag.innerHTML = "Housing Affordability Index";
-		textdiv.appendChild(aTag); ;
-	}
-	*/
+if (DataToUseWithSpaces == "Housing affordability index") {
+	var textdiv = document.getElementById("ExtraReferences");
+	var aTag = document.createElement('a');
+	aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Dunedin%20City/StandardOfLiving/Housing_Affordability");
+	aTag.setAttribute('target', "_blank");
+	aTag.innerHTML = "Housing Affordability Index";
+	textdiv.appendChild(aTag); ;
+}
+*/
 
 	
 
