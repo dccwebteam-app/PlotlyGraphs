@@ -422,7 +422,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
-			fixedrange: Zooming
+			fixedrange: Zooming			
 			},
 		yaxis: {
 			zeroline: false, 
