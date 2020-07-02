@@ -120,6 +120,12 @@ RemoveBlanks(yValuesNZ, dels);
 		}
 	];
 
+	
+if (DataToUseWithSpaces == "Rental affordability index")
+	{rangemodeValue = "normal";}
+else
+	{rangemodeValue = "tozero";}
+
 	layout = {
 		title : DataToUseWithSpaces,
 		showlegend : true,
@@ -135,12 +141,11 @@ RemoveBlanks(yValuesNZ, dels);
 			dtick: dTickValue,
 			tick0: "2000-06-30",
 			tickformat: "%b '%y",
-
 			zeroline : false,
 		},
 			yaxis : {
 			fixedrange : Zooming,
-			rangemode: "tozero",
+			rangemode: rangemodeValue,
 			zeroline : false
 		}
 
