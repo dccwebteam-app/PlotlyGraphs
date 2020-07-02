@@ -140,6 +140,7 @@ RemoveBlanks(yValuesNZ, dels);
 		},
 			yaxis : {
 			fixedrange : Zooming,
+			rangemode: "tozero",
 			zeroline : false
 		}
 
