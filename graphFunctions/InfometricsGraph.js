@@ -122,9 +122,15 @@ RemoveBlanks(yValuesNZ, dels);
 
 	
 if (DataToUseWithSpaces == "Rental affordability index")
-	{rangemodeValue = "normal";}
+	{
+	rangemodeValue = "normal",
+	rangeValue = "[0.2, 0.4]"
+	;}
 else
-	{rangemodeValue = "tozero";}
+	{
+	rangemodeValue = "tozero",
+	rangeValue = ""
+	;}
 
 	layout = {
 		title : DataToUseWithSpaces,
@@ -136,16 +142,16 @@ else
 			xanchor: 'center'},
 		xaxis : {
 			fixedrange : Zooming,
-
 			type: 'date',
 			dtick: dTickValue,
 			tick0: "2000-06-30",
 			tickformat: "%b '%y",
 			zeroline : false,
 		},
-			yaxis : {
+		yaxis : {
 			fixedrange : Zooming,
 			rangemode: rangemodeValue,
+			range: rangeValue,
 			zeroline : false
 		}
 
