@@ -152,7 +152,7 @@ layout = {
 			fixedrange: Zooming, 
 			zeroline: false, 
 			tickmode: 'linear', 
-			tick0 : 1,
+			tick0 : 0,
 			dtick: dtickValue,
 			tickangle: 45,
 			autorange: true,
