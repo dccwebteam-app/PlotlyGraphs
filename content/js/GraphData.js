@@ -294,7 +294,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "<b>Data source</b>",
-				text : "Statistics New Zealand / Russell Jones",
+				text : "Statistics New Zealand / Russell Jones / Infometrics",
 				url : "/PlotlyGraphs/data/Population.csv"
 			}
 		]
