@@ -123,15 +123,15 @@ else if (timeframe_Development_by_Month == "Years") {
 		StartDate = new Date('2010-01-01');
 		StartDate.setDate(StartDate.getDate()-300);		
 		if (WindowWidth < 500)
-			{dtickValue = TimeToMilliseconds(4, "Years");}
+			{dtickValue = TimeToMilliseconds(5, "Years");}
 		else 
 			{dtickValue = TimeToMilliseconds(1, "Years");}
 		}
 	else
 		{
-		tick0Value = '1991-01-01';	
+		tick0Value = '1992-01-01';	
 		if (WindowWidth < 500)
-			{dtickValue = TimeToMilliseconds(5, "Years");}
+			{dtickValue = TimeToMilliseconds(4, "Years");}
 		else 
 			{dtickValue = TimeToMilliseconds(2, "Years");}
 		}
