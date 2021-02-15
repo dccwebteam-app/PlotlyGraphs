@@ -144,7 +144,7 @@ else
 			fixedrange : Zooming,
 			type: 'date',
 			dtick: dTickValue,
-			tick0: "2000-06-30",
+			tick0: "2002-06-30",
 			tickformat: "%b '%y",
 			zeroline : false,
 		},
