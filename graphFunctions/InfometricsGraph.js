@@ -124,12 +124,12 @@ RemoveBlanks(yValuesNZ, dels);
 if (DataToUseWithSpaces == "Rental affordability index")
 	{
 	rangemodeValue = "normal",
-	rangeValue = [0.2, 0.4]
+	rangeValue = [0.15, 0.3]
 	;}
 else
 	{
-	rangemodeValue = "tozero",
-	rangeValue = ""
+	rangemodeValue = "normal",
+	rangeValue = [2, 8]
 	;}
 
 	layout = {
