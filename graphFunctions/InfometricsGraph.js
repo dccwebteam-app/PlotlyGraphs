@@ -18,7 +18,7 @@ var WindowWidth = t();
 if (WindowWidth < 500)
 	{dTickValue = "M36";}
 else 
-	{dTickValue = "M12";}
+	{dTickValue = "M36";}
 
 var DataToUseWithSpaces = $('#InfometricsGraph_Datatype option:selected').text();
 var DataToUse = DataToUseWithSpaces.replace(/ /g, "");
