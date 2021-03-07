@@ -31,11 +31,11 @@ var graphdata = [{
 			{
 				text : "Start year",
 				id : "dropdownStartYear_Citywide_by_Suburb",
-				valtext : ["2019", "2018", "2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002"]
+				valtext : ["2020", "2019", "2018", "2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002"]
 			},{
 				text : "End year",
 				id : "dropdownEndYear_Citywide_by_Suburb",
-				valtext : ["2019", "2018", "2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002"]
+				valtext : ["2020", "2019", "2018", "2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002"]
 			},{
 				text : "Choose a data type",
 				id : "datatypedd_CitywideBySuburbgraph",
@@ -64,7 +64,8 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "datatypedd_DevelopmentbyMonthgraph",
-				valtext : ["Total dwellings consented","Consented dwellings by type", "Value of consented construction", "Constructed dwellings"]
+				valtext : ["Total dwellings consented","Consented dwellings by type", "Value of consented construction", "Constructed dwellings", "Consented dwellings by development type"]
+//				valtext : ["Total dwellings consented","Consented dwellings by type", "Value of consented construction", "Constructed dwellings", "Consented dwellings by development type", "Consented dwellings by zone"]
 			},{
 				text : "Choose a timeframe",
 				id : "timeframe_DevelopmentbyMonthgraph",
