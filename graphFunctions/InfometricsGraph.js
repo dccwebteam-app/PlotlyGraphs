@@ -28,7 +28,6 @@ RangeValues = [];
 
 /*
 document.getElementById("ExtraReferences").innerHTML = "";
-
 if (DataToUseWithSpaces == "Rental affordability index") {
 	var textdiv = document.getElementById("ExtraReferences");
 	var aTag = document.createElement('a');
@@ -37,7 +36,6 @@ if (DataToUseWithSpaces == "Rental affordability index") {
 	aTag.innerHTML = "Rental Affordability Index";
 	textdiv.appendChild(aTag); ;
 }
-
 if (DataToUseWithSpaces == "Housing affordability index") {
 	var textdiv = document.getElementById("ExtraReferences");
 	var aTag = document.createElement('a');
