@@ -68,6 +68,9 @@ else {
 
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
+//	rangeSliderVis = true;
+	rangeSliderVis = false;
+
 	
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
@@ -99,6 +102,8 @@ if (timeframe_Development_by_Month == "Months") {
 
 else if (timeframe_Development_by_Month == "Year to date") {
 	VisType = 'line';
+//	rangeSliderVis = true;
+	rangeSliderVis = false;
 
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
@@ -112,8 +117,9 @@ else if (timeframe_Development_by_Month == "Year to date") {
 		;}
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
-	var StartDate = new Date(DateMinMax(filteredDates, "min"));
-	StartDate.setDate(StartDate.getDate()+345);
+
+	var StartDate = new Date(DateMinMax(filteredDates, "max"));
+	StartDate.setDate(StartDate.getDate()-1840);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 	
@@ -129,6 +135,7 @@ else if (timeframe_Development_by_Month == "Year to date") {
 	
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar';
+	rangeSliderVis = false;
 
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
@@ -190,6 +197,8 @@ else if (timeframe_Development_by_Month == "Years") {
 	;}	
 else {
 	VisType = 'line';
+	rangeSliderVis = false;
+
 	xValues = $.map(chartData, function(data){
 			return data["All Months"];
 		});
@@ -267,10 +276,11 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 		title: 'Total dwellings consented',
 		showlegend: false,
 		xaxis: {
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
@@ -373,10 +383,11 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
@@ -488,10 +499,11 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
@@ -531,10 +543,11 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 		title: 'Constructed dwellings',
 		showlegend: false,
 		xaxis: {
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
@@ -595,10 +608,11 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
@@ -761,10 +775,11 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
