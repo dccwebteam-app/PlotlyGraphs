@@ -66,6 +66,94 @@ else {
 	TimeframeConverted = ""+timeframe_Development_by_Month+" "
 	;}
 
+var annotations = [
+    {
+	text: '<b>Date range selection:</b>',
+	x: 0,
+	y: 1.175,
+	yref: 'paper',
+	xref: 'paper',
+	xanchor: 'left',
+	align: 'left',
+	showarrow: false
+    }
+]
+	
+if (timeframe_Development_by_Month == "Years" && datatypetouse_Development_by_Month != "Constructed dwellings" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
+	var selectorOptions = {
+		buttons: [{
+			step: 'year',
+			stepmode: 'backward',
+			count: 10,
+			label: '10 years'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 20,
+			label: '20 years'
+		}, {
+			step: 'all',
+		}],
+		};
+	;}
+	
+else if (timeframe_Development_by_Month == "Years") {
+	var selectorOptions = false;
+	var annotations = false;
+	;}	
+
+else if (timeframe_Development_by_Month == "Months" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
+	var selectorOptions = {
+		buttons: [{
+			step: 'year',
+			stepmode: 'backward',
+			count: 1,
+			label: '1 year'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 2,
+			label: '2 years'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 5,
+			label: '5 years'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 10,
+			label: '10 years'
+		}, {
+			step: 'all',
+		}],
+		};
+	;}	
+	
+else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_Month == "Year to date") {
+	var selectorOptions = {
+		buttons: [{
+			step: 'year',
+			stepmode: 'backward',
+			count: 1,
+			label: '1 year'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 2,
+			label: '2 years'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 5,
+			label: '5 years'
+		}, {
+			step: 'all',
+		}],
+		};
+	;}		
+	
+
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
 //	rangeSliderVis = true;
@@ -267,7 +355,7 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 		x: xValues,
 		y: yValues,
 		type: VisType,
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour1}
         }];
@@ -275,8 +363,10 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 	layout = {
 		title: 'Total dwellings consented',
 		showlegend: false,
+		annotations: annotations,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -324,59 +414,95 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 	RemoveBlanks(yValuesRVUs, dels);
 	RemoveBlanks(yValuesTotal, dels);
 	
-	data = [{
-		x: xValues,
-		y: yValuesHouses,
-		name: "Houses",
-		hoverlabel: {namelength :-1},
-		type: 'line',
-		connectgaps: true,
-		line: {width: 5,},
-		marker: {color: Colour1}
-		
-        },{
-		x: xValues,
-		y: yValuesUnits,
-		name: "Units",
-		hoverlabel: {namelength :-1},
-		type: 'line',
-		connectgaps: true,
-		line: {width: 5,},
-		marker: {color: Colour2}
-		
-        },{
-		x: xValues,
-		y: yValuesApartments,
-		name: "Apartments",
-		hoverlabel: {namelength :-1},
-		type: 'line',
-		connectgaps: true,
-		line: {width: 5,},
-		marker: {color: Colour4}
-		
-        },{
-		x: xValues,
-		y: yValuesRVUs,
-		name: "Retirement village units",
-		hoverlabel: {namelength :-1},
-		type: 'line',
-		connectgaps: true,
-		line: {width: 5,},
-		marker: {color: Colour5}
-		 
-        },{
-		x: xValues,
-		y: yValuesTotal,
-		name: "Total",
-		type: 'bar',
-		connectgaps: true,
-		opacity: 0.7,
-		marker: {color: Colour3}
-        }];
+	if (timeframe_Development_by_Month == "Months") {
+		data = [{
+			x: xValues,
+			y: yValuesHouses,
+			name: "Houses",
+			hoverlabel: {namelength :-1},
+			type: 'bar',
+			connectgaps: true,
+			marker: {color: Colour1}			
+			},{
+			x: xValues,
+			y: yValuesUnits,
+			name: "Units",
+			hoverlabel: {namelength :-1},
+			type: 'bar',
+			connectgaps: true,
+			marker: {color: Colour2}
+			},{
+			x: xValues,
+			y: yValuesApartments,
+			name: "Apartments",
+			hoverlabel: {namelength :-1},
+			type: 'bar',
+			connectgaps: true,
+			marker: {color: Colour4}
+			},{
+			x: xValues,
+			y: yValuesRVUs,
+			name: "Retirement village units",
+			hoverlabel: {namelength :-1},
+			type: 'bar',
+			connectgaps: true,
+			marker: {color: Colour5}
+			}];
+		}
+	else {
+		data = [{
+			x: xValues,
+			y: yValuesHouses,
+			name: "Houses",
+			hoverlabel: {namelength :-1},
+			type: 'line',
+			connectgaps: true,
+			line: {width: 4,},
+			marker: {color: Colour1}			
+			},{
+			x: xValues,
+			y: yValuesUnits,
+			name: "Units",
+			hoverlabel: {namelength :-1},
+			type: 'line',
+			connectgaps: true,
+			line: {width: 4,},
+			marker: {color: Colour2}
+			},{
+			x: xValues,
+			y: yValuesApartments,
+			name: "Apartments",
+			hoverlabel: {namelength :-1},
+			type: 'line',
+			connectgaps: true,
+			line: {width: 4,},
+			marker: {color: Colour4}
+			},{
+			x: xValues,
+			y: yValuesRVUs,
+			name: "Retirement village units",
+			hoverlabel: {namelength :-1},
+			type: 'line',
+			connectgaps: true,
+			line: {width: 4,},
+			marker: {color: Colour5}
+			},{
+			x: xValues,
+			y: yValuesTotal,
+			name: "Total",
+			type: 'bar',
+			connectgaps: true,
+			opacity: 0.7,
+			marker: {color: Colour3}
+			}];	
+	}
+	
 
 	layout = {
 		title: 'Consented dwellings by type',
 		showlegend: true,
+		annotations: annotations,
+		barmode: 'stack',
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -384,6 +510,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -395,8 +522,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		yaxis: {
 			zeroline: false, 
 			rangemode: 'tozero',
-			fixedrange: Zooming,
-			barmode: 'stack'
+			fixedrange: Zooming
 			}
 		}
 	;}
@@ -444,7 +570,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		visible: 'legendonly',
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour5}		
         },{
@@ -453,7 +579,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "New residential buildings",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour1}
 		
@@ -463,7 +589,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "Residential alterations",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour4}
 		
@@ -474,7 +600,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		visible: 'legendonly',
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour3}
 		
@@ -485,7 +611,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		visible: 'legendonly',
 		hoverlabel: {namelength :-1},
 		type: 'line',
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour2}
         }];
@@ -493,6 +619,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 	layout = {
 		title: 'Value of consented construction',
 		showlegend: true,
+		annotations: annotations,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -500,6 +627,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -534,7 +662,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 		y: yValues,
 		name: "Constructed dwellings",
 		type: VisType,
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour1}
         }];
@@ -542,8 +670,10 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 	layout = {
 		title: 'Constructed dwellings',
 		showlegend: false,
+		annotations: annotations,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -585,7 +715,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 		name: "Greenfield",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour1}		
         },{
@@ -594,7 +724,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 		name: "Brownfield",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		line: {width: 6,},
+		line: {width: 4,},
 		connectgaps: true,
 		marker: {color: Colour2}
         }];
@@ -602,6 +732,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 	layout = {
 		title: 'Consented dwellings by development type',
 		showlegend: true,
+		annotations: annotations,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -609,6 +740,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -769,6 +901,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 	layout = {
 		title: 'Consented dwellings by zone',
 		showlegend: true,
+		annotations: annotations,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -776,6 +909,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
