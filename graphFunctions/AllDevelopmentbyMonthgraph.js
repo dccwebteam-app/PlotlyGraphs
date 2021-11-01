@@ -60,10 +60,12 @@ var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph 
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
 if (timeframe_Development_by_Month == "Year to date") {
-	TimeframeConverted = "YTD "
+	TimeframeConverted = "YTD ";
+	xTitle = "Year to date"
 	;}
 else {
-	TimeframeConverted = ""+timeframe_Development_by_Month+" "
+	TimeframeConverted = ""+timeframe_Development_by_Month+" ";
+	xTitle = ""
 	;}
 
 var annotations = [
@@ -373,7 +375,8 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 //			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			title: {text: xTitle}
 			},		
 		yaxis: {
 			zeroline: false,
@@ -517,7 +520,8 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 //			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			title: {text: xTitle}
 			},
 		yaxis: {
 			zeroline: false, 
@@ -634,7 +638,8 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 //			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			title: {text: xTitle}
 			},
 		yaxis: {
 			zeroline: false, 
@@ -680,7 +685,8 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 //			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
-			fixedrange: Zooming			
+			fixedrange: Zooming,
+			title: {text: xTitle}			
 			},
 		yaxis: {
 			zeroline: false, 
@@ -747,7 +753,8 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 //			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			title: {text: xTitle}
 			},
 		yaxis: {
 			zeroline: false, 
@@ -916,7 +923,8 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 //			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
-			fixedrange: Zooming			
+			fixedrange: Zooming,
+			title: {text: xTitle}			
 			},
 		yaxis: {
 			zeroline: false, 
