@@ -127,7 +127,7 @@ if (DataToUseWithSpaces == "Rental affordability index")
 else
 	{
 	rangemodeValue = "normal",
-	rangeValue = [1.9, 8.1]
+	rangeValue = [1.9, 9.1]
 	;}
 
 	layout = {
