@@ -44,7 +44,7 @@ function PropertyDataGraph(chartData){
 				}),
 			type: 'line',
 			name: 'Average house values',
-			line: {width: 6},
+			line: {width: 4},
 			marker: {color: Colour1},
 			yaxis: 'y2'		
 		},{
@@ -78,7 +78,7 @@ function PropertyDataGraph(chartData){
 				fixedrange: Zooming,
 				rangemode: "tozero",
 				side: 'right',
-				range:[0,1200]
+				range:[0,1000]
 				},
 			yaxis2: {
 				zeroline: false,
@@ -87,7 +87,7 @@ function PropertyDataGraph(chartData){
 				side: 'left',
 				tickformat: '$,s',
 				overlaying: 'y',
-				range:[0,600000]
+				range:[0,1000000]
 				}
 			};
 		
@@ -101,7 +101,7 @@ function PropertyDataGraph(chartData){
 				}),
 			type: 'line',
 			name: 'Quarterly growth rate',
-			line: {width: 6},
+			line: {width: 4},
 			marker: {color: Colour1}
 		},{
 			x: xData,
@@ -110,7 +110,7 @@ function PropertyDataGraph(chartData){
 				}),
 			type: 'line',
 			name: 'Annual growth rate',
-			line: {width: 6},
+			line: {width: 4},
 			marker: {color: Colour3}
 			}];
 			
@@ -148,7 +148,7 @@ function PropertyDataGraph(chartData){
 				}),
 			type: 'line',
 			name: 'Property sales',
-			line: {width: 6},
+			line: {width: 4},
 			marker: {color: Colour1}
 			}];
 		layout = {
