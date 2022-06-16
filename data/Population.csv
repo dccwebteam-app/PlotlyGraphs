@@ -1,4 +1,24 @@
 Year,EstimatedPopulation_Total,ProjectedPopulation_Total_Low,ProjectedPopulation_Total_Medium,ProjectedPopulation_Total_High,EstimatedPopulation_AbsoluteGrowth,ProjectedPopulation_AbsoluteGrowth_Low,ProjectedPopulation_AbsoluteGrowth_Medium,ProjectedPopulation_AbsoluteGrowth_High,EstimatedPopulation_GrowthRate,ProjectedPopulation_GrowthRate_Low,ProjectedPopulation_GrowthRate_Medium,ProjectedPopulation_GrowthRate_High,EstimatedHouseholds_Total,ProjectedHouseholds_Total_Low,ProjectedHouseholds_Total_Medium,ProjectedHouseholds_Total_High,EstimatedHouseholds_AbsoluteGrowth,ProjectedHouseholds_AbsoluteGrowth_Low,ProjectedHouseholds_AbsoluteGrowth_Medium,ProjectedHouseholds_AbsoluteGrowth_High,EstimatedHouseholds_GrowthRate,ProjectedHouseholds_GrowthRate_Low,ProjectedHouseholds_GrowthRate_Medium,ProjectedHouseholds_GrowthRate_High,AgeRange,2000,2010,2020,2030,2040,YearRange,YearRange_0_14_AbsoluteGrowth_Medium,YearRange_15_24_AbsoluteGrowth_Medium,YearRange_25_64_AbsoluteGrowth_Medium,YearRange_65_plus_AbsoluteGrowth_Medium,YearRange_0_14_GrowthRate_Medium,YearRange_15_24_GrowthRate_Medium,YearRange_25_64_GrowthRate_Medium,YearRange_65_plus_GrowthRate_Medium
+1890,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1891,"64,786",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1896,"65,970",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1901,"71,088",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1906,"74,532",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1911,"80,711",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1916,"80,742",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1921,"84,431",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1926,"97,391",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1936,"94,806",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1945,"95,413",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1951,"103,208",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1956,"107,359",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1961,"112,687",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1966,"116,365",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1971,"118,390",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1976,"121,019",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1981,"114,665",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1986,"114,231",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1991,"116,577",,"40,926",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 1996,"120,800",,,,,,,,,,,,"42,861",,,,,,,,,,,,Aged 0-14,"21,900","19,980","20,638","20,621","19,952",2000-2009,"-1,880","1,580","1,470","1,140",-0.085844749,0.065181518,0.025349198,0.073643411
 1997,"120,400",,,,-400,,,,-0.0033,,,,"42,911",,,,50,,,,0.0012,,,,Aged 15-24,"24,240","26,010","28,242","28,111","27,766",2010-2019,270,910,"4,410","4,390",0.013513514,0.034986544,0.074117647,0.260379597
 1998,"120,200",,,,-200,,,,-0.0017,,,,"43,033",,,,121,,,,0.0028,,,,Aged 25-64,"57,990","59,500","60,944","60,996","60,351",2020-2029,92,-209,120,"6,868",0.004453044,-0.007397665,0.00196852,0.304861944
