@@ -835,9 +835,9 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 	
 	data = [{
 		x: xValues,
-		y: yValuesTownshipAndSettlement,
-		name: "Township and Settlement",
-		marker: {color: Colour1},
+		y: yValuesCommercialandMixedUse,
+		name: "Commercial and Mixed Use",
+		marker: {color: Colour7},
 		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
@@ -863,9 +863,9 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 		stackgroup: 'one'
         },{
 		x: xValues,
-		y: yValuesLargeLotResidential,
-		name: "Large Lot Residential",
-		marker: {color: Colour5},
+		y: yValuesTownshipAndSettlement,
+		name: "Township and Settlement",
+		marker: {color: Colour1},
 		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
@@ -875,18 +875,11 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 		marker: {color: Colour6},
 		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
-        },{
+		},{
 		x: xValues,
-		y: yValuesCommercialandMixedUse,
-		name: "Commercial and Mixed Use",
-		marker: {color: Colour7},
-		hoverlabel: {namelength :-1},
-		stackgroup: 'one'
-        },{
-		x: xValues,
-		y: yValuesRural,
-		name: "Rural",
-		marker: {color: Colour8},
+		y: yValuesLargeLotResidential,
+		name: "Large Lot Residential",
+		marker: {color: Colour5},
 		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
@@ -894,6 +887,13 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 		y: yValuesRuralResidential,
 		name: "Rural Residential",
 		marker: {color: Colour9},
+		hoverlabel: {namelength :-1},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesRural,
+		name: "Rural",
+		marker: {color: Colour8},
 		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
