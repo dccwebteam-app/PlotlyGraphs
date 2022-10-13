@@ -69,7 +69,7 @@ var graphdata = [{
 			},{
 				text : "Choose a timeframe",
 				id : "timeframe_DevelopmentbyMonthgraph",
-				valtext : ["Years", "Months", "Year to date"]	
+				valtext : ["Year to date", "Years", "Months"]	
 			}
 		],
 		link : [
