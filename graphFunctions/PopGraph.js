@@ -383,11 +383,11 @@ function PopGraph(chartData){
         
         
     var yRangeDict = {};
-    yRangeDict["Population" + "Growth"] = [-510,2100];
-    yRangeDict["Population" + "Growth rate"] = [-0.0051,0.0151];
+    yRangeDict["Population" + "Growth"] = [-2100,2100];
+    yRangeDict["Population" + "Growth rate"] = [-0.0201,0.0151];
     yRangeDict["Population" + "Total"] = [108900,161010];
-    yRangeDict["Households" + "Growth"] = [-210,810];
-    yRangeDict["Households" + "Growth rate"] = [-0.0051,0.0151];
+    yRangeDict["Households" + "Growth"] = [-1010,810];
+    yRangeDict["Households" + "Growth rate"] = [-0.0201,0.0151];
     yRangeDict["Households" + "Total"] = [39500,65500];
     yRangeDict["Population by age" + "Growth"] = [-2600,8100];
     yRangeDict["Population by age" + "Growth rate"] = [-0.11,0.35];
@@ -434,4 +434,3 @@ function PopGraph(chartData){
     Plotly.newPlot('PopulationGraph', data, layout);
         
     ;} 
-    
